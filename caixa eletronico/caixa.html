@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+let saldo = 1000;
+let nome = prompt("Qual é o seu nome?");
+alert("Seja bem-vindo " + nome + "!");
+
+function inicio() {
+  let opcao = prompt(`Escolha uma opção:
+    1. Saldo
+    2. Extrato
+    3. Saque
+    4. Depósito
+    5. Transferência
+    6. Sair`);
+    
+  switch (opcao) {
+    case "1":
+      let senha1 = prompt("Informe a senha:");
+      if (senha1 === '3589') {     
+        alert("O seu saldo atual é de: R$" + saldo.toFixed(2));
+      } else {     
+        alert("Senha incorreta");
+      }
+      inicio();
+      break;
+    
+    case "2":
+      let senha2 = prompt("Informe a senha:");
+      if (senha2 === '3589') {
+        alert("Seu extrato: \nFortnite - R$50,00\nRocket League - R$50,00\nPokemon - R$50,00");
+      } else {
+        alert("Senha incorreta");
+      }
+      inicio();
+      break;
+    
+    case "3":
+      let senha3 = prompt("Informe a senha:");
+      if (senha3 === '3589') {
+        let valor = Number(prompt("Insira o valor que você deseja retirar:"));
+        if (valor > saldo) {
+          alert("Saldo insuficiente");
+        } else {
+          saldo -= valor;
+          alert("Saque realizado com sucesso, o seu saldo atual é de R$ " + saldo.toFixed(2));
+        }
+      } else {
+        alert("Senha incorreta");
+      }
+      inicio();
+      break;
+    
+    case "4":
+      let senha4 = prompt("Informe a senha:");
+      if (senha4 === "3589") {
+        let valor = Number(prompt("Insira o valor do depósito:"));
+        if (valor > 0) {
+          saldo += valor;
+          alert(`Depósito realizado com sucesso! Seu novo saldo é: R$${saldo.toFixed(2)}`);
+        } else {
+          alert("Valor inválido. O depósito não pode ser realizado.");
+        }
+      } else {
+        alert("Senha incorreta.");
+      }
+      inicio();
+      break;
+    
+    case "5":
+      let senha5 = prompt("Informe a senha:");
+      if (senha5 === '3589') {
+        let valor = Number(prompt("Insira o valor que você deseja transferir:"));
+        if (valor > saldo) {
+          alert("Saldo insuficiente");
+        } else {
+          saldo -= valor;
+          alert("Transferência realizada com sucesso, o seu saldo atual é de R$ " + saldo.toFixed(2));
+        }
+      } else {
+        alert("Senha incorreta");
+      }
+      inicio();
+      break;
+    
+    case "6":
+      alert("Obrigado pela preferência, tenha um ótimo dia " + nome );
+      break;
+      
+    default:
+      alert("Opção inválida");
+      inicio(); 
+      break;
+  }
+}
+
+inicio(); 
+    </script>
+    
+</body>
+</html>
