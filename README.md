@@ -53,4 +53,4 @@ Ao acessar o sistema, informe seu nome quando solicitado.
 
 -Em caso de erros, mensagens de "Operação não autorizada" serão exibidas quando as restrições mencionadas acima não forem cumpridas.
 
--                                                   Ao escolher sair do sistema, será exibida uma mensagem de agradecimento.
+- Ao escolher sair do sistema, será exibida uma mensagem de agradecimento.
